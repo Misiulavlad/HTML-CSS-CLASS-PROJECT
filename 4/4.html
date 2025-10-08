@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>дакУмент</title>
+
+<style>
+.wraper{
+display: grid;
+grid-template-columns: repeat(7,1fr);
+}
+
+    .div{
+height: 200px;
+background-color:red;
+border:2px solid black;
+}
+
+    .children{
+container-type:inline-size;
+container-name:sidebar;
+}
+
+@media (width <= 1280px){
+.wraper{
+grid-template-columns: repeat(6,1fr);
+}
+}
+
+@media (width <= 1024px){
+    .wraper{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
+@media (width <= 968px){
+    .wraper{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+
+@media (width <= 768px){
+    .wraper{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+
+@media (width <= 568px){
+    .wraper{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+
+@media (width <= 412px){
+    .wraper{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
+
+
+
+@container sidebar (width<200px){
+    .div{
+background-color:red;
+    }
+}
+
+@container sidebar (width>200px){
+    .div{
+background-color:green;
+    }
+}
+
+</style>
+</head>
+<body>
+
+  <div class="wraper">
+<div class="children">  
+   <div class="div"></div>
+</div> 
+     
+<div class="children">  
+    <div class="div"></div>
+ </div> 
+
+ <div class="children">  
+    <div class="div"></div>
+ </div> 
+
+ <div class="children">  
+    <div class="div"></div>
+ </div> 
+
+ <div class="children">  
+    <div class="div"></div>
+ </div> 
+
+ <div class="children">  
+    <div class="div"></div>
+ </div> 
+  </div>  
+
+</body>
+</html>
