@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <input id="input" type="text" />
+    <ul id="container"></ul>
+    <button id="add">Add</button>
+
+    <script>
+     
+
+      const input = document.querySelector("#input");
+      const add = document.querySelector("#add");
+      const container = document.querySelector("#container");
+
+      const handleAddText = () => {
+        const text = input.value.trim();
+        if (text) {
+          const li = document.createElement("li");
+          li.classList.add("box");
+          li.innerText = text;
+          container.appendChild(li);
+          input.value = "";
+        }
+      };
+
+      add.addEventListener("click", handleAddText);
+    </script>
+  </body>
+</html>
