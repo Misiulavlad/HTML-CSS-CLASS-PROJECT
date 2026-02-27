@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js</title>
+</head>
+<body>
+    <script>
+        
+        // function isPolindrom(str){
+        // return (str.toLowerCase().replaceAll(" ","") === str.replaceAll(" ","").toLowerCase().split('').reverse().join(''));
+        // }
+
+        // console.log(isPolindrom("12321"));
+        // console.log(isPolindrom("12345"));
+        // console.log(isPolindrom("12345054321"));
+
+        
+        // task1
+function truncate(text,maxLength){
+    const newmax=maxLength+1;
+    if(text.length>newmax){
+        return text.slice(0,maxLength)+"...";
+    } else{
+        return text;
+    }
+}
+console.log(truncate("Example sentence",100));
+console.log(truncate("Example sentence",7));
+
+
+
+// task2
+
+function countVowels(text) {
+    const matches = text.match(/[аеёиоуыэюя]/gi);
+    return matches ? matches.length : 0;
+}
+
+console.log(countVowels("Привет")); 
+
+
+
+
+// task3
+
+function formatName(fullName){
+return fullName.split(" ").reverse().join(", ");
+}
+
+console.log(formatName("Timur Vasilevskiy"));
+console.log(formatName("Ванечка Петушко"));
+
+
+// task4
+function generatePassword(length) { 
+    if(length<6){
+        return "Нужно минимум 6";
+    }else{
+    const lower = "abcdefghijklmnopqrstuvwxyz";
+    const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    const numbers = "0123456789";
+    const symbols = "!@#$%^&*";
+
+    const allChars = lower + upper + numbers + symbols;
+
+    let password = "";
+    password+= lower[Math.floor(Math.random()*lower.length)];
+    password += upper[Math.floor(Math.random() * upper.length)];
+    password += numbers[Math.floor(Math.random() * numbers.length)];
+    password += symbols[Math.floor(Math.random() * symbols.length)];
+
+for(let i=4;i<length;i++){
+    const randIndeex=Math.floor(Math.random()*allChars.length);
+    password+=allChars[randIndeex];
+}
+
+password=password.split("").sort(()=>Math.random()-0.5).join("");
+return password;
+    }
+}
+
+console.log(generatePassword(10));
+console.log(generatePassword(2));
+
+
+
+
+
+
+function isValidEmail(email) {
+    if (email.includes(" ")) return false;
+
+    const atIndex = email.indexOf("@");
+    if (atIndex <= 0 || atIndex === email.length - 1) return false;
+
+    const localPart = email.slice(0, atIndex);
+    const domainPart = email.slice(atIndex + 1);
+
+    const dotIndex = domainPart.lastIndexOf(".");
+    if (dotIndex <= 0 || dotIndex === domainPart.length - 1) return false;
+
+    if (!localPart || !domainPart) return false;
+
+    return true;
+}
+
+console.log(isValidEmail("test@example.com."));
+console.log(isValidEmail("user.name@domain.ru"));
+console.log(isValidEmail("invalid-email")); 
+console.log(isValidEmail("user@domain")); 
+console.log(isValidEmail("@domain.com"));
+
+
+    </script>
+    </body>
+</html>
