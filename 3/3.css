@@ -1,0 +1,34 @@
+/* .btn{
+border-radius: 8px;
+transform:translate(9px 73px);
+width: 30px;
+height: 20px;
+display: flex;
+transition: transform 0.5s ;
+}
+
+.text{
+width: auto;
+height: 30px;
+border: 5px solid black;
+}
+
+.y{
+ display: inline-block;
+border:20px solid black;
+width: auto;
+background-color: brown;
+}
+
+.y:hover{
+background: linear-gradient(70deg, darkgreen,rgb(255, 255, 0));
+
+}
+
+body{
+    display: flex;
+align-items: center;
+justify-content: space-around;
+margin: 20px;
+
+} */

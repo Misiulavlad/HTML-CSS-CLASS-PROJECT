@@ -1,0 +1,161 @@
+ <!-- <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="3.css">
+</head>
+<body>
+
+    <div class="text">
+<div>Отдать имущество ване</div>
+    </div>
+
+
+<div class="btn">
+<button>Нет</button>
+</div>
+    
+<div class="y">
+<a href="https://www.shutterstock.com/ru/video/clip-21939406-countdown-10---1-red-revolving-textured">Да</a>
+</div>
+
+<script>
+    const btn = document.querySelector('.btn');
+  
+    btn.addEventListener('mouseenter', () => {
+      const x = Math.floor(Math.random() * 100) - 100; // от -50 до +50px
+      const y = Math.floor(Math.random() * 100) - 100;
+      btn.style.transform = `translate(${x}px, ${y}px)`;
+    });
+  
+    btn.addEventListener('mouseleave', () => {
+      btn.style.transform = 'translate(0, 0)';
+    });
+  </script>
+
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>title</title>
+
+<style>
+.btn{
+width: auto;
+height: auto;
+background-color:lightgreen;
+border:2px solid black;
+border-radius:8px;
+}
+
+.btn:hover{
+background-color:darkgreen;
+}
+
+.btn:active{
+background-color:red;
+}
+
+
+.in{
+background-color:red;
+border:2px solid black;    
+}
+
+.in:hover{
+background:linear-gradient(70deg,red,green);
+}
+
+.b{
+height: 20px;
+width: 100px;
+border: 2px solid black;
+transition:0.5s ease;
+overflow: hidden;
+}
+
+.b:has(.nan:checked){
+height: 200px;
+
+}
+
+li:nth-child(1n){
+    background-color:grey;
+}
+
+li:nth-child(2n){
+    background-color:red;
+}
+
+li:nth-child(3n){
+    background-color:yellow;
+}
+
+li:nth-child(4n){
+    background-color:blue;
+}
+
+
+
+</style>
+
+
+</head>
+<body>
+
+
+
+<div>
+    <input class="in" type="text">
+<button class="btn">CLICK</button>
+</div>
+
+
+<div class="b">
+    <input class="nan" type="checkbox">
+    <p>fguhjoidd</p>
+    <p>fguhjoidd</p>
+
+</div>
+
+
+
+<ul>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li>6</li>
+<li>7</li>
+<li>8</li>
+<li>9</li>
+<li>10</li>
+<li>11</li>
+<li>12</li>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li>6</li>
+<li>7</li>
+<li>8</li>
+<li>9</li>
+<li>10</li>
+<li>11</li>
+<li>12</li>
+</ul>
+
+    
+</body>
+</html>
